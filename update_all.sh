@@ -1,10 +1,10 @@
 #!/bin/bash
 # ensure env variables
-echo 'export aws=True' >> $HOME/.bashrc
+echo 'export nyu_hcp=True' >> $HOME/.bashrc
 source $HOME/.bashrc
 
 echo  'import os' >> $HOME/.jupyter/jupyter_notebook_config.py
-echo "os.environ['aws'] = 'True'" >> $HOME/.jupyter/jupyter_notebook_config.py
+echo "os.environ['nyu_hcp'] = 'True'" >> $HOME/.jupyter/jupyter_notebook_config.py
 
 # Update all
 conda update numpy setuptools numpy scipy matplotlib nose mayavi pandas h5py pil patsy pyside joblib -y

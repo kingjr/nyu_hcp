@@ -1,4 +1,4 @@
 #cloud-config
 runcmd:
- - [sh, $HOME/aws/update.sh ]
+ - [sh, $HOME/nyu_hcp/update.sh ]
  - [sh, -xc, "echo 'Hello World.  The time is now $(date -R)!' | tee $HOME/ou$

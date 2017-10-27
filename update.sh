@@ -1,6 +1,6 @@
 #!/bin/bash
 # Update itself
-cd $HOME/aws
+cd $HOME/nyu_hcp
 git pull origin master
 cd $HOME
-sh $HOME/aws/update_all.sh
+sh $HOME/nyu_hcp/update_all.sh

@@ -1,11 +1,11 @@
-# aws
+# nyu_hcp
 ## Launch
 
 user-data
 ```
 #cloud-config
 runcmd:
- - [sh, /home/ubuntu/aws/update.sh ]
+ - [sh, /home/ubuntu/nyu_hcp/update.sh ]
  - [sh, -xc, "echo 'Hello World.  The time is now $(date -R)!' | tee /home/ubuntu/ou$
 ```
 
@@ -61,13 +61,13 @@ sudo apt-get install git htop g++ libhdf5-serial-dev bmon tig --fix-missing
 
 
 # Run default default install
-git clone https://github.com/kingjr/aws
-sh aws/setup_conda.sh
-sh aws/user_setup.sh
-sudo sh aws/sudo_setup.sh
+git clone https://github.com/kingjr/nyu_hcp
+sh nyu_hcp/setup_conda.sh
+sh nyu_hcp/user_setup.sh
+sudo sh nyu_hcp/sudo_setup.sh
 ```
 
-Mount EBS: first time: See http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-using-volumes.html
+Mount EBS: first time: See http://docs.nyu_hcp.amazon.com/nyu_hcpEC2/latest/UserGuide/ebs-using-volumes.html
 
 ```
 sudo nano /etc/hosts
@@ -81,4 +81,4 @@ sudo mount /dev/xvdb /data/
 
 Change delete on termination
 
-```aws ec2 modify-instance-attribute --instance-id i-a3XXXXX --block-device-mappings "[{\"DeviceName\": \"/dev/sda1\",\"Ebs\":{\"DeleteOnTermination\":false}}]"```
+```nyu_hcp ec2 modify-instance-attribute --instance-id i-a3XXXXX --block-device-mappings "[{\"DeviceName\": \"/dev/sda1\",\"Ebs\":{\"DeleteOnTermination\":false}}]"```
