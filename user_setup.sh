@@ -9,8 +9,9 @@ source $HOME/.bashrc
 
 # Setup jupyter notebook
 PASSWD=$(ipython -c "import IPython;pwd=IPython.lib.passwd();print(pwd)")
-jupyter notebook --generate-config -y
-cp $HOME/nyu_hcp/jupyter_notebook_config.py $HOME/.jupyter/jupyter_notebook_config.py
-echo "c.NotebookApp.password = u'$PASSWD'" >> $HOME/.jupyter/jupyter_notebook_config.py
+cd
+jupyter notebook --generate-config
+jupyter notebook password
 echo "import os;os.environ['nyu_hcp'] = 'True'" >> $HOME/.jupyter/jupyter_notebook_config.py
+echo "c.NotebookApp.port = 6984" >> $HOME/.jupyter/jupyter_notebook_config.py
 echo "c.InteractiveShellApp.matplotlib = 'inline'" >> $HOME/.jupyter/jupyter_notebook_config.py

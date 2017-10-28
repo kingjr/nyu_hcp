@@ -1,5 +1,13 @@
 #!/bin/bash
 # Install depencies
+wget -c http://downloads.sourceforge.net/project/htop/htop/0.9/htop-0.9.tar.gz
+tar xvzf htop-0.9.tar.gz
+cd htop-0.9
+./configure
+make
+make install
+cd 
+
 conda install numpy setuptools numpy scipy matplotlib nose mayavi pandas h5py pil patsy pyside joblib
 
 git clone https://github.com/scikit-learn/scikit-learn; cd scikit-learn; python setup.py install; cd ~/
@@ -14,3 +22,4 @@ git clone https://github.com/h5io/h5io; cd h5io/; python setup.py install; cd ~/
 git clone https://github.com/kingjr/valentin-eeg
 git clone https://github.com/kingjr/decoding_unconscious_maintenance
 git clone https://github.com/kingjr/meg_perceptual_decision_symbols
+instal
